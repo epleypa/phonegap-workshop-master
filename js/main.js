@@ -14,6 +14,7 @@ var app = {
     },
 
     initialize: function() {
+<<<<<<< HEAD
         var self = this;
     	this.store = new MemoryStore(function() {
         	self.showAlert('Store Initialized', 'Info');
@@ -28,6 +29,11 @@ var app = {
 			alert(title ? (title + ": " + message) : message);
 		//}
 	},
+=======
+        this.store = new MemoryStore();
+        $('.search-key').on('keyup', $.proxy(this.findByName, this));
+    }
+>>>>>>> parent of cadf6a1... Part 3 Complete
 
 };
 

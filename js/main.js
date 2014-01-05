@@ -1,12 +1,12 @@
+window.addEventListener('load', function() {
+    new FastClick(document.body);
+}, false);
+
 var app = {
 
-    alertDismissed: function alertDismissed() {
-            // do something
-        },
-	
-	showAlert: function (message, title) {
+    showAlert: function (message, title) {
         if (navigator.notification) {
-            navigator.notification.alert(message, alertDismissed, title, 'OK');
+            navigator.notification.alert(message, null, title, 'OK');
         } else {
             alert(title ? (title + ": " + message) : message);
         }
